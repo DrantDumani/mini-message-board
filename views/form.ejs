@@ -2,18 +2,23 @@
 <html lang="en">
   <head>
     <title><%=title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/global.css" />
     <link rel="stylesheet" href="/stylesheets/form.css" />
   </head>
   <body>
-    <h1><%=title %></h1>
-    <form action="/new" method="POST">
-      <label for="user">Username</label>
-      <input id="user" name="user" />
+    <%- include("navbar"); -%>
 
-      <label for="text">Message</label>
-      <input id="text" name="text" />
-      <button>Submit</button>
-    </form>
+    <main>
+      <h1><%=title %></h1>
+      <form action="/new" method="POST">
+        <label for="user">Username</label>
+        <input id="user" name="user" />
+        <label for="text">Message</label>
+        <textarea id="text" name="text"></textarea>
+        <button>Submit</button>
+      </form>
+    </main>
+
+    <%- include("footer"); -%>
   </body>
 </html>

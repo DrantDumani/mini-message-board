@@ -1,10 +1,28 @@
+form {
+  margin-top: 2rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
 label,
-input {
+input,
+textarea {
   display: block;
 }
 
-input {
+input,
+textarea {
+  font-family: inherit;
   margin-bottom: 1rem;
+  width: 15rem;
+  padding: 0.5rem;
+}
+
+textarea {
+  resize: none;
 }
 
 button {
