@@ -1,8 +1,38 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.title {
+  padding-bottom: 1.5rem;
 }
 
-a {
-  color: #00B7FF;
+.sub-title {
+  padding-bottom: 1rem;
+}
+
+.msg-list {
+  border: 1px solid var(--msg-border-clr);
+}
+
+.msg-list li:nth-of-type(even) {
+  background-color: #ececec;
+}
+
+.msg-list li:last-child p {
+  border: none;
+}
+
+.msg-author-wrapper,
+.msg {
+  padding: 0.7rem 0.5rem;
+  border-bottom: 1px solid var(--msg-border-clr);
+}
+
+.msg-author-wrapper {
+  display: flex;
+  justify-content: space-between;
+  color: #3b3bfe;
+}
+
+.msg {
+  line-height: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  overflow-wrap: break-word;
 }

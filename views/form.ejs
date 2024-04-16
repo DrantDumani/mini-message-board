@@ -2,18 +2,45 @@
 <html lang="en">
   <head>
     <title><%=title %></title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/global.css" />
     <link rel="stylesheet" href="/stylesheets/form.css" />
   </head>
   <body>
-    <h1><%=title %></h1>
-    <form action="/new" method="POST">
-      <label for="user">Username</label>
-      <input id="user" name="user" />
+    <%- include("navbar"); -%>
 
-      <label for="text">Message</label>
-      <input id="text" name="text" />
-      <button>Submit</button>
-    </form>
+    <main>
+      <h1><%=title %></h1>
+      <form action="/new" method="POST">
+        <label for="user">Username</label>
+        <input
+          id="user"
+          name="user"
+          pattern="[^\W]+"
+          required
+          minlength="3"
+          maxlength="16"
+        />
+        <p class="valid-txt">
+          *Username must be between 3 and 16 characters long. It cannot contain
+          spaces or any special characters (?!@#$%^&*[]{}-)
+        </p>
+
+        <label for="text">Message</label>
+        <textarea
+          id="text"
+          name="text"
+          required
+          minlength="3"
+          maxlength="400"
+        ></textarea>
+        <p class="valid-txt">
+          *Message must be between 3 and 4 characters long.
+        </p>
+
+        <button>Submit</button>
+      </form>
+    </main>
+
+    <%- include("footer"); -%>
   </body>
 </html>
