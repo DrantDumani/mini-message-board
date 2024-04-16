@@ -15,11 +15,9 @@ const messages = [
 ];
 
 function validateInput(user, text) {
-  if (!/[^\W]+/.test(user) && user.length < 3 && user.length > 16) return false;
+  if (!/[^\W]+/.test(user) || user.length < 3 || user.length > 16) return false;
   const trimmed = text.trim();
-  if (trimmed.length > 400) return false;
-  let index = 0;
-  let count = 0;
+  if (trimmed.length > 400 || trimmed.length < 3) return false;
   return true;
 }
 

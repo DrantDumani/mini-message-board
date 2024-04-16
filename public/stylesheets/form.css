@@ -16,13 +16,19 @@ textarea {
 input,
 textarea {
   font-family: inherit;
-  margin-bottom: 1rem;
   width: 15rem;
   padding: 0.5rem;
 }
 
 textarea {
   resize: none;
+}
+
+.valid-txt {
+  margin-bottom: 1rem;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  font-style: italic;
 }
 
 button {
