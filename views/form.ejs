@@ -12,9 +12,24 @@
       <h1><%=title %></h1>
       <form action="/new" method="POST">
         <label for="user">Username</label>
-        <input id="user" name="user" />
+        <input
+          id="user"
+          name="user"
+          pattern="[^\W]+"
+          required
+          minlength="3"
+          maxlength="16"
+        />
+
         <label for="text">Message</label>
-        <textarea id="text" name="text"></textarea>
+        <textarea
+          id="text"
+          name="text"
+          required
+          minlength="3"
+          maxlength="400"
+        ></textarea>
+
         <button>Submit</button>
       </form>
     </main>
