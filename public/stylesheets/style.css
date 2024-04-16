@@ -27,6 +27,7 @@
 .msg-author-wrapper {
   display: flex;
   justify-content: space-between;
+  color: #3b3bfe;
 }
 
 .msg {
