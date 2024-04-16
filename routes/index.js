@@ -36,7 +36,7 @@ router.post("/new", (req, res, next) => {
     messages.push({ user, text, added: new Date() });
     return res.redirect("/");
   }
-  res.send("Error");
+  res.send("There was an error sending your message. ");
 });
 
 module.exports = router;
