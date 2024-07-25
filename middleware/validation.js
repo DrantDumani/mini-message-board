@@ -11,6 +11,6 @@ exports.validateInput = (req, res, next) => {
     text.length > 400 ||
     text.length < 3
   ) {
-    return res.send("There was an error sending your message. ");
+    return res.status(400).send("There was an error sending your message.");
   } else return next();
 };
