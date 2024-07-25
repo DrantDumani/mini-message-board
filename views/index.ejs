@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
     <link rel="stylesheet" href="/stylesheets/global.css" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
@@ -15,13 +17,13 @@
         <% messages.forEach(function(msg){ %>
         <li>
           <div class="msg-author-wrapper">
-            <p><%=msg.user %></p>
+            <p><%=msg.username %></p>
             <p>
-              <%= (function(){return (msg.added.getMonth() + 1) + "/" +
-              msg.added.getDate() + "/" + msg.added.getFullYear()})() -%>
+              <%= (function() {return (new
+              Date(msg.added_at).toLocaleDateString()) })() %>
             </p>
           </div>
-          <p class="msg"><%=msg.text %></p>
+          <p class="msg"><%=msg.content %></p>
         </li>
         <% }) %>
       </ul>
