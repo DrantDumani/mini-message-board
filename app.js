@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 
-const indexRouter = require("./routes/index");
+const indexRouter = require("./routes/indexRouter");
 
 const app = express();
 const port = process.env.PORT || 3000;
