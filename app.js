@@ -5,7 +5,7 @@ const indexRouter = require("./routes/indexRouter");
 require("dotenv").config();
 
 const app = express();
-const port = process.env.APP_PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
